@@ -2,6 +2,32 @@
 
 - py没有自增自减符(++ --)
 
+### python读文件
+```
+f = open(r'c:\test.txt', 'r')
+try:
+    data = f.read()
+finally:
+    f.close()
+```
+或
+```
+with open(r'c:\test.txt', 'r') as f:
+    data = f.read()
+```
+
+文件对象有三种读方法：read(), readline()和readlines()
+- read()，读取整个文件，返回一个字符串。如果内存不够大，可用read(size)
+- readline()，每次读一行，比readlines()慢，仅当内存不够时才使用
+- readlines()，读取整个文件，返回一个列表，每行为一个元素
+
+python读文件首字节乱码问题
+- 在windows上用open打开utf-8编码的txt文件时开头会有一个多余的\ufeff，叫BOM，用来声明编码信息的，但python会把它当做文本解析。
+- 解决：修改encoding为utf-8_sig或utf_8_sig
+```
+open('1.txt', encoding='utf_8_sig' )
+```
+
 ### 正则表达式
 - 需要导入模块 import re
 - 字符串前r表示raw string，即\不表示转义，如 \n在raw string(原生字符串) 中是两个字符 \和n
