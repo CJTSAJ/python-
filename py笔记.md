@@ -33,3 +33,8 @@ open('1.txt', encoding='utf_8_sig' )
 - 字符串前r表示raw string，即\不表示转义，如 \n在raw string(原生字符串) 中是两个字符 \和n
 - \b 匹配单词边界，如 'er\b'可以匹配"never"中的er，但不能匹配 'verb'中的er；\B匹配非单词边界
 - '\' 转义字符，剥夺原含义，赋予新含义
+
+- match()：从字符串头开始匹配，如果不符合，则匹配失败，返回None
+- research()：匹配整个字符串，直到找到一个匹配
+- findall()：找到所有子串
+
