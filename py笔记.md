@@ -40,9 +40,14 @@ open('1.txt', encoding='utf_8_sig' )
 - findall()：找到所有子串
 </br></br></br>
 ### pyqt5
-按钮触发事件
+按钮触发事件，openfile为自定义函数
 ```
 self.pushButton.clicked.connect(self.openfile) #按钮触发事件
+```
+
+获得输入框文本
+```
+word = self.textEdit_2.toPlainText() #获得输入框文本
 ```
 
 
