@@ -38,20 +38,20 @@ open('1.txt', encoding='utf_8_sig' )
 - '\' 转义字符，剥夺原含义，赋予新含义
 </br></br></br>
 - match()：从字符串头开始匹配，如果不符合，则匹配失败，返回None
-- research()：匹配整个字符串，直到找到一个匹配
-- findall()：找到所有子串
+- research()：匹配整个字符串，直到找到一个匹配，返回第一个匹配字符串
+- findall()：找到所有子串，返回字符串列表
 </br></br></br>
 ### pyqt5
 按钮触发事件，openfile为自定义函数
 ```
 self.pushButton.clicked.connect(self.openfile) #按钮触发事件
 ```
-
+</br></br>
 获得输入框文本
 ```
 word = self.textEdit_2.toPlainText() #获得输入框文本
 ```
-
+</br></br>
 打开文件选择框并限制文件格式，第三个参数为当前文件路径，第四个参数为文件格式 </br>
 文件格式：All Files (*);;PDF Files (*.pdf);;Text Files (*.txt)
 ```
@@ -60,4 +60,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 file_name = QFileDialog.getOpenFileName(None, '选择文件', os.getcwd(), 'Excel files(*.xlsx , *.xls, *.csv)') #打开文件界面
 ```
-
+</br></br>
+消息弹框：QmessageBox.information, QmessageBox.question, QmessageBox.warning
+```
+QMessageBox.information(None, "提示", "请输入正确的文件格式", QMessageBox.Yes)
+```
