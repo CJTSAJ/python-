@@ -2,6 +2,8 @@
 
 - py没有自增自减符(++ --)
 - is和==的区别，==判断两个变量的值是否相等，is判断两个变量的id(唯一标识，相当于地址)是否相等
+- sys.argv 命令行参数，同c/c++文件执行main的argv参数
+- sys.exit()，python程序退出，发出SystemExit异常然后退出
 </br></br></br>
 ### python读文件
 ```
@@ -50,4 +52,12 @@ self.pushButton.clicked.connect(self.openfile) #按钮触发事件
 word = self.textEdit_2.toPlainText() #获得输入框文本
 ```
 
+打开文件选择框并限制文件格式，第三个参数为当前文件路径，第四个参数为文件格式 </br>
+文件格式：All Files (*);;PDF Files (*.pdf);;Text Files (*.txt)
+```
+import os
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
+file_name = QFileDialog.getOpenFileName(None, '选择文件', os.getcwd(), 'Excel files(*.xlsx , *.xls, *.csv)') #打开文件界面
+```
 
