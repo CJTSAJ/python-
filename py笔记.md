@@ -5,6 +5,26 @@
 - sys.argv 命令行参数，同c/c++文件执行main的argv参数
 - sys.exit()，python程序退出，发出SystemExit异常然后退出
 </br></br></br>
+
+### python矩阵操作
+以矩阵为主的基础软件包，list内存是分散存储的，而Numpy的数组是一块连续均匀的内存；numpy能够向量化运算整个数组，速度较快；numpy矩阵计算可以采用多线程方式，充分利用CPU资源
+```
+import numpy as np
+#创建一维数组
+nd_one = np.array([1, 2, 3])
+#创建二维数组
+nd_two = np.array([[1, 2, 3], [4, 5, 6]])
+#创建一个 5x3 的数组
+x1 = np.arange(15).reshape((5, 3))
+#创建一个 3x4 的数组且所有值全为 0
+x3 = np.zeros((3, 4), dtype=int)
+print(x3)
+#创建一个 3x4 的数组且所有元素值全为 1
+x4 = np.ones((3, 4), dtype=int)
+print(x4)
+#创建一个 3x4 的数组，然后将所有元素的值填充为 2
+x5 = np.full((3, 4), 2, dtype=int)
+```
 ### python读文件
 ```
 f = open(r'c:\test.txt', 'r')
