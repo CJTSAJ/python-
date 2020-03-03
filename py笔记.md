@@ -85,3 +85,6 @@ file_name = QFileDialog.getOpenFileName(None, '选择文件', os.getcwd(), 'Exce
 ```
 QMessageBox.information(None, "提示", "请输入正确的文件格式", QMessageBox.Yes)
 ```
+</br></br></br>
+### 数据可视化
+import pyqtgraph;通过pycharm designer设计layout布局，添加graphic view元素，将graphic view元素prompt to(class:PlotWidget header file:pyqtgraph)
