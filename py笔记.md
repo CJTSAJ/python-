@@ -4,6 +4,8 @@
 - is和==的区别，==判断两个变量的值是否相等，is判断两个变量的id(唯一标识，相当于地址)是否相等
 - sys.argv 命令行参数，同c/c++文件执行main的argv参数
 - sys.exit()，python程序退出，发出SystemExit异常然后退出
+- set初始化：set()或{1, 2}
+- 字典初始化：{}；({}表示空字典而不是set)
 </br></br></br>
 
 ### python矩阵操作
