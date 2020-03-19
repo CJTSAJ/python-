@@ -6,6 +6,7 @@
 - sys.exit()，python程序退出，发出SystemExit异常然后退出
 - set初始化：set()或{1, 2}
 - 字典初始化：{}；({}表示空字典而不是set)
+- time.clock(精度非常高，计算程序在cpu上运行的时间)，time.time()是时间戳
 </br></br></br>
 
 ### python矩阵操作
