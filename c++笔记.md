@@ -1,0 +1,1 @@
+- 二维数组初始化: vector<vector<int> > newOne(r, vector<int>(c, 0)); 值全设为0
