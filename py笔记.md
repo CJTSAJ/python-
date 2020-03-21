@@ -89,5 +89,25 @@ file_name = QFileDialog.getOpenFileName(None, '选择文件', os.getcwd(), 'Exce
 QMessageBox.information(None, "提示", "请输入正确的文件格式", QMessageBox.Yes)
 ```
 </br></br></br>
-### 数据可视化
+### 数据可视化(pyqtgraph)
 import pyqtgraph;通过pycharm designer设计layout布局，添加graphic view元素，将graphic view元素prompt to(class:PlotWidget header file:pyqtgraph)
+
+### QPainter(绘制各种图形，线、虚线、多边形等；以及动态绘制)
+- QPainter类对QWidget类进行绘制
+- 在QWidget类初始化的时候会调用内置的painEvent()函数，只需要重写painEvent函数，在该函数内用QPainter对QWidget进行绘制
+- 动态绘制：repaint()和update()函数会引起paintEvent()调用；update()可能会进行优化，将多次重绘合为一次，而repaint()则like进行重绘
+```
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+
+class PaintArea(QWidget):
+    def __init__(self, widget: QWidget):
+        super(PaintArea, self).__init__(widget)
+        self.pen = QPen(Qt.black, 2, Qt.SolidLine)
+
+    def paintEvent(self, QPaintEvent) -> None:
+        qp = QPainter(self)
+        qp.setPen(self.pen)
+        qp.drawLine(10, 10, 40, 40)
+```
